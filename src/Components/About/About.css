@@ -412,8 +412,8 @@
 @media (max-width: 480px) {
     .about {
         width: 780px;
-        margin: 40px 5px;
-        padding: 0 20px;
+        margin: 40px 0px;
+        padding: 0 25px;
         gap: 50px;
         align-items: center;
         justify-content: center;
