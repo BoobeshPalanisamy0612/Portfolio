@@ -14,10 +14,10 @@ This portfolio is built using modern web technologies to provide a fast, respons
 
 - [Vite](https://vitejs.dev/) - Frontend build tool
 - [React](https://reactjs.org/) (if applicable, or your tech stack)
-- HTML5 & CSS3
-- JavaScript (ES6+)
+- HTML5 & CSS
+- JavaScript
 - [ESLint](https://eslint.org/) - Code linting
-- Other libraries/tools you used (e.g., Tailwind CSS, etc.)
+
 
 ---
 
