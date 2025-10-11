@@ -14,10 +14,17 @@ This portfolio is built using modern web technologies to provide a fast, respons
 
 - [Vite](https://vitejs.dev/) - Frontend build tool
 - [React](https://reactjs.org/) (if applicable, or your tech stack)
+<<<<<<< HEAD
 - HTML5 & CSS3
 - JavaScript (ES6+)
 - [ESLint](https://eslint.org/) - Code linting
 - Other libraries/tools you used (e.g., Tailwind CSS, etc.)
+=======
+- HTML5 & CSS
+- JavaScript
+- [ESLint](https://eslint.org/) - Code linting
+
+>>>>>>> 7304494542d1fe06fcbf97310f57f07f1108384d
 
 ---
 
@@ -48,4 +55,8 @@ This project can be deployed easily using GitHub Pages or any other static site 
 
 🤝 Contributing
 
+<<<<<<< HEAD
 Feel free to fork the project and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+=======
+Feel free to fork the project and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+>>>>>>> 7304494542d1fe06fcbf97310f57f07f1108384d
