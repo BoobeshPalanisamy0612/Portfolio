@@ -1,0 +1,192 @@
+.Contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+
+.Contact-title{
+    position: relative;
+}
+.Contact-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.Contact-title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.contact-section{
+    display: flex;
+    gap: 150px;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contact-left h1{
+    font-size: 80px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #00E6FF 0.36%, #FF2E92 102.06%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.contact-left p{
+    font-size: 20px;
+    font-weight: 550px;
+    color: #D8D8D8;
+    line-height: 35px;
+}
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #D8D8D8;
+    font-size: 22px;
+}
+.contact-detail{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.contact-right{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+.contact-right label{
+    color: #D8D8D8;
+    font-size: 22px;
+    font-weight: 500;
+}
+.contact-right input{
+    border: none;
+    width: 700px;
+    height: 78px;
+    padding-left: 20px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: 'Metal Mania';
+    font-size: 20px;
+}
+
+.contact-right textarea{
+    border: none;
+    width: 650px;
+    padding: 25px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: 'Metal Mania';
+    font-size: 20px;
+}
+
+.contact-submit{
+    border: none;
+    color: white;
+    font-size: 22px;
+    border-radius: 50px;
+    padding: 20px 60px;
+    background: linear-gradient(267deg, #00E6FF 0.36%, #FF2E92 102.06%);
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 50px; 
+}
+
+.contact-submit:hover{
+    transform: scale(1.1);
+    background: linear-gradient(267deg, #FF2E92 0.36%, #00E6FF 102.06%);
+    transition: 0.3s;
+}
+
+
+@media (max-width: 768px) {
+    .Contact {
+        margin: 40px 100px;
+        width: 100%;
+        gap: 40px;
+        padding: 0 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Contact-title h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .Contact-title img {
+        width: 150px;
+        height: auto;
+        bottom: -5px;
+        right: 7px;
+    }
+
+    .contact-section {
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .contact-left {
+        order: 1; 
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .contact-right {
+        order: 2; 
+        width: 100%;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contact-left h1 {
+        font-size: 40px;
+    }
+
+    .contact-left p {
+        font-size: 38px;
+        line-height: 50px;
+    }
+
+    .contact-details {
+        gap: 30px;
+        font-size: 50px;
+    }
+
+    .contact-right label{
+        font-size: 50px;
+    }
+
+    .contact-right input,
+    .contact-right textarea {
+        width: 100%;
+        max-width: 100%;
+        font-size: 50px;
+        padding: 15px;
+    }
+
+    .contact-submit {
+        padding: 15px 40px;
+        font-size: 30px;
+    }
+}
+
