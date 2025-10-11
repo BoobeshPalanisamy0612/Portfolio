@@ -274,3 +274,120 @@
     font-size: 24px;
   }
 }
+
+@media (max-width: 480px) {
+  .education {
+    width: 780px;
+    padding: 40px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .education-title h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .education-title img {
+    width: 150px;
+    height: auto;
+    bottom: 0px;
+    right: 7px;
+  }
+
+  .education-grid {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+  }
+
+  .education-left {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .animation-wrap {
+    transform: none;
+    width: 700px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .education-lottie {
+    max-width: 100%;
+    width: 700px;
+    height: 600px;
+  }
+
+  .education-right {
+    order: 2;
+    transform: none;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .education-cards {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .education-card {
+    width: 100%;
+    width: 550px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .education-card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .education-duration {
+    font-size: 38px;
+    margin-bottom: 8px;
+  }
+
+  .education-title h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .education-title img {
+    width: 120px;
+    height: auto;
+    bottom: -8px;
+  }
+
+  .education-title {
+    font-size: 28px;
+  }
+
+  .education-institution {
+    font-size: 24px;
+  }
+}
