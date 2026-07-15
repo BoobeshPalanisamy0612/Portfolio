@@ -745,7 +745,7 @@
 @media screen and (max-width: 480px) {
 
   .projects-section{
-    width: 780px;
+    width: 800px;
     padding: 40px 25px;
   }
 
@@ -777,9 +777,10 @@
   }
 
   .project-card{
-    width: 600px;
+    width: 580px;
     height: 500px;
     margin: 0 20px;
+    padding: 0 10px;
   }
 
   .laptop-mockup{
