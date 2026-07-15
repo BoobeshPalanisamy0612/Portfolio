@@ -13,6 +13,7 @@
     font-size: 18px;
     border: none;
     outline: none;
+    font-family: 'Metal Mania';
     transition: background 0.10s, color 0.2s, box-shadow 0.2s;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -28,6 +29,7 @@
     background: #FF2E92;
     color: #fff;
     box-shadow: 0 0 12px 0 #00E6FF88;
+    
 }
 
 .hero-resume {
@@ -48,6 +50,17 @@
         text-decoration: none;
         display: block;
     }
+.hero-connect .anchor-link,
+.hero-resume a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-icon {
+    font-size: 16px;
+}
 
 .hero {
     display: flex;
@@ -58,8 +71,24 @@
     width: 100%;
     min-height: 70vh;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
+@keyframes glowDrift {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50%      { opacity: 1;   transform: scale(1.06); }
+}
+.hero b {
+    font-family: 'Metal Mania';
+    color: #ffffff;
+    background: linear-gradient(267deg, #00E6FF 0.36%, #FF2E92 102.06%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+
+}
 .hero-content {
     flex: 2;
     display: flex;
@@ -69,6 +98,7 @@
     font-family: 'Merienda';
     gap: 30px;
     position: relative;
+    z-index: 1;
     margin: 0;
     text-align: center;
 }
@@ -79,28 +109,52 @@
     width: 100%;
 }
 
-.hero-content .uiux {
-    position: absolute;
-    top: 130px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    animation: fadeUiux 5s linear infinite;
-    display: inline-block;
-    width: auto;
-    text-align: center;
+/* ===== Role badge (glass pill, rotates content) ===== */
+.role-wrap {
+    position: relative;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
-.hero-content .webdev {
+.role-badge {
     position: absolute;
-    top: 130px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    animation: fadeWebdev 5s linear infinite;
     display: inline-block;
-    width: auto;
-    text-align: center;
+    width: max-content;
+
+    font-family: 'Metal Mania';
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #fff;
+
+    padding: 8px 22px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 230, 255, 0.35);
+    box-shadow: 0 0 16px rgba(0, 230, 255, 0.15);
+    
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.role-badge.webdev {
+    border-color: rgba(255, 46, 146, 0.35);
+    box-shadow: 0 0 16px rgba(255, 46, 146, 0.15);
+}
+
+.role-badge.uiux {
+    animation: fadeUiux 5s linear infinite;
+}
+
+.role-badge.webdev {
+    animation: fadeWebdev 5s linear infinite;
 }
 
 @keyframes fadeUiux {
@@ -150,10 +204,28 @@
 .hero-img {
     flex: 1;
     display: flex;
-    margin-right: 150px;
-    margin-top: 70px;
-    margin-bottom: 60px;
+    margin-right: 80px;      /* reduce from 150px so iframe fits */
+    margin-top: 40px;
+    margin-bottom: 40px;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-animation {
+    width: 580px;
+    height: 450px;
+    border-radius: 20px;
+    border: 2px solid #00E6FF44;
+    box-shadow:
+        0 0 40px #00E6FF33,
+        0 0 80px #FF2E9222,
+        0 8px 32px rgba(0,0,0,0.4);
+    background: transparent;
+    display: block;
+    overflow: hidden;
+    pointer-events: none;
 }
 
 .hero-img img {
@@ -272,22 +344,26 @@
         width: auto;
         min-width: 160px;
         text-align: center;
-        font-size: 35px;
+        font-size: 24px;
     }
 
-    .hero-resume a {
-        color: white;
-        text-decoration: none;
-        display: block;
+    .hero-connect a,
+    .hero-resume a,
+    .hero-connect .anchor-link {
+        font-size: 24px;
     }
 
-    .hero-content .uiux,
-    .hero-content .webdev {
-        top: 90px;
-        font-size: 34px;
+    .role-wrap {
+        height: 60px;
         margin-top: 60px;
         margin-bottom: 60px;
     }
+
+    .role-badge {
+        font-size: 22px;
+        padding: 10px 26px;
+    }
+
     .hero-socials {
         gap: 40px;
         margin-bottom: 10px;
@@ -361,22 +437,26 @@
         width: auto;
         min-width: 160px;
         text-align: center;
-        font-size: 35px;
+        font-size: 20px;
     }
 
-    .hero-resume a {
-        color: white;
-        text-decoration: none;
-        display: block;
+    .hero-connect a,
+    .hero-resume a,
+    .hero-connect .anchor-link {
+        font-size: 20px;
     }
 
-    .hero-content .uiux,
-    .hero-content .webdev {
-        top: 90px;
-        font-size: 34px;
+    .role-wrap {
+        height: 60px;
         margin-top: 60px;
         margin-bottom: 60px;
     }
+
+    .role-badge {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
     .hero-socials {
         gap: 40px;
         margin-bottom: 10px;

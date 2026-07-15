@@ -36,8 +36,129 @@
     align-items: center;
     justify-content: center;
 }
+.about-profile-flip {
+    position: relative;
+    perspective: 1500px;
+    width: 100%;
+    max-width: 350px;
+    height: 380px;
+    margin-right: 50px;
+    border-radius: 0.5rem;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    will-change: transform;
+}
+.about-profile-flip::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 3px;
+    border-radius: 0.5rem;
+
+    background: linear-gradient(135deg, #00e6ff, #ff2e92, #7c3aed, #00e6ff);
+    background-size: 300% 300%;
+    animation: aboutBorderMove 6s linear infinite;
+
+    mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+    z-index: 3; /* above the flip card, below nothing since it's just a ring */
+}
+
+@keyframes aboutBorderMove {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.about-profile-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 700ms cubic-bezier(.2, .9, .2, 1);
+    transform-style: preserve-3d;
+    border-radius: 0.5rem;
+}
+
+.about-profile-flip:hover .about-profile-inner {
+    transform: rotateY(180deg);
+}
+
+.about-profile-front,
+.about-profile-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.about-profile-front {
+    z-index: 2;
+}
 
 .about-profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none; 
+}
+
+.about-profile-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #0f172a, #070b14);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 40px rgba(0, 230, 255, 0.15);
+}
+
+.about-profile-back h3 {
+    font-size: 22px;
+    background: linear-gradient(120deg, #00e6ff, #ff2e92);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+}
+
+.about-profile-back p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.about-profile-tilt {
+    width: 100%;
+    max-width: 350px;
+    height: 380px;
+    margin-right: 50px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    will-change: transform;
+}
+
+/* .about-profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none; /* so mousemove tracks the wrapper, not the img }*/
+
+
+/* .about-profile {
     width: 100%;
     max-width: 350px;
     margin-right: 50px;
@@ -45,7 +166,7 @@
     border-radius: 0.5rem;
     object-fit: cover;
     transition: transform 220ms cubic-bezier(.2, .9, .2, 1);
-}
+} */
 
 .about-profile:hover,
 .about-profile:focus {
@@ -321,7 +442,7 @@
         justify-content: center;
     }
 
-    .about-profile {
+    .about-profile-flip {
         max-width: 450px;
         height: 450px;
         margin: 0 auto;
@@ -489,11 +610,13 @@
         justify-content: center;
     }
 
-    .about-profile {
+    .about-profile-flip {
         max-width: 450px;
         height: 450px;
-        margin: 0 auto;
+        margin: 0px;
     }
+
+    
 
     .about-right {
         width: 100%;
