@@ -58,12 +58,12 @@
     background-size: 300% 300%;
     animation: aboutBorderMove 6s linear infinite;
 
-    mask: linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
     mask-composite: exclude;
 
     pointer-events: none;
