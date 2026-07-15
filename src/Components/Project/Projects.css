@@ -745,7 +745,7 @@
 @media screen and (max-width: 480px) {
 
   .projects-section{
-    width: 800px;
+    width: 780px;
     padding: 40px 25px;
   }
 
@@ -780,6 +780,7 @@
     width: 600px;
     height: 500px;
     margin: 0 auto;
+    padding: 0 20px;
   }
 
   .laptop-mockup{
