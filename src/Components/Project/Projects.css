@@ -774,7 +774,7 @@
 
   .projects-grid{
     gap: 22px;
-    margin-left: 80px;
+    margin-left: 100px;
   }
 
   .project-card{
@@ -782,6 +782,7 @@
     height: 500px;
     margin: 0 10px;
     padding: 0 10px;
+    overflow: hidden;
   }
 
   .laptop-mockup{
