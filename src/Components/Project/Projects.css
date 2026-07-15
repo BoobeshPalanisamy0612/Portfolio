@@ -774,11 +774,11 @@
 
   .projects-grid{
     gap: 22px;
-    margin-left: 80px;
+    margin-left: 50px;
   }
 
   .project-card{
-    width: 500px;
+    width: 600px;
     height: 500px;
     margin: 0 10px;
     padding: 0 10px;
