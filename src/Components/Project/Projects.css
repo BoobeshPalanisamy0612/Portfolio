@@ -774,6 +774,7 @@
 
   .projects-grid{
     gap: 22px;
+    margin-left: 10px;
   }
 
   .project-card{
